@@ -1,0 +1,98 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Navigation Menu */
+
+.main-nav {
+  width: 100vw;
+  height: 56px;
+  background-color: #ffffff;
+  font-size: 16px;
+  padding: 12px;
+  position: fixed;
+}
+.nav-item {
+  width: 100vw;
+  padding: 0;
+}
+.main-nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 23px;
+}
+
+.main-nav-link {
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 24px;
+  color: rgb(61, 61, 61);
+  display: flex;
+  align-items: center;
+}
+
+.main-nav-link ion-icon {
+  width: 24px;
+  height: 24px;
+  color: #000;
+  margin-right: 8px;
+}
+
+.main-nav-list input {
+  background-color: #f0f5ff;
+  border-radius: 5px;
+  text-overflow: ellipsis;
+  padding: 0 35px;
+  border: 0;
+  outline: 0 none;
+  font-size: 17px;
+  height: 40px;
+  width: 50vw;
+}
+
+.seach-icon {
+  position: absolute;
+  top: 18px;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+  margin-left: 3px;
+}
+
+.login-btn {
+  position: relative;
+}
+
+.login-card {
+  width: 300px;
+  height: 150px;
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 8px;
+  position: absolute;
+  display: none;
+}
+
+.hover-card {
+  display: block;
+}
+.login-card ul {
+  margin-left: 10px;
+}
+.login-card li {
+  list-style: none;
+}
+
+.login-card li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.arrow-up-icon {
+  display: none;
+}
