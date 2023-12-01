@@ -4,16 +4,33 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
+/* Update the CSS for the body */
+body {
+  background-color: #f1f2f4;
+  font-family: inter_regular, fallback-inter_regular, Arial, sans-serif;
+  font-size: 12px;
+  color: #000;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 /* Navigation Menu */
 
 .main-nav {
   width: 100vw;
-  height: 56px;
+  height: 60px;
   background-color: #ffffff;
   font-size: 16px;
-  padding: 12px;
+  padding: 7px 0;
   position: fixed;
+  z-index: 9999;
 }
+
 .nav-item {
   width: 100vw;
   padding: 0;
@@ -21,6 +38,7 @@
 .main-nav-list {
   display: flex;
   align-items: center;
+  justify-content: center;
   list-style: none;
   gap: 23px;
 }
@@ -45,7 +63,8 @@
   background-color: #f0f5ff;
   border-radius: 5px;
   text-overflow: ellipsis;
-  padding: 0 35px;
+  padding-left: 35px;
+  padding-right: 10px;
   border: 0;
   outline: 0 none;
   font-size: 17px;
@@ -55,7 +74,7 @@
 
 .seach-icon {
   position: absolute;
-  top: 18px;
+  top: 14px;
   color: #000;
   display: flex;
   justify-content: center;
@@ -75,7 +94,9 @@
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   padding: 8px;
   position: absolute;
+  top: 56px;
   display: none;
+  background-color: #ffffff;
 }
 
 .hover-card {
@@ -95,4 +116,269 @@
 
 .arrow-up-icon {
   display: none;
+  margin-left: 5px; /* Add margin for spacing */
+}
+
+/* MAIN CONTENT REUUSE BODY */
+main {
+  background-color: #f1f2f4;
+  padding: 65px 10px;
+  flex: 1; /* This will make sure main takes the remaining height */
+}
+
+.container {
+  max-width: 1350px;
+  margin: 10px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* product list images css */
+main p {
+  margin-bottom: 20px;
+}
+
+.product-content {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 15px;
+}
+.prod-list img {
+  height: 58px;
+  width: 58px;
+}
+
+/* slider images css */
+.slider .container {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
+
+.slide-img {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide-img img {
+  width: 100%;
+  height: auto;
+}
+
+.slider .container button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  background-color: #fff;
+  color: #878787;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  height: 88px;
+  width: 40px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.prev-btn {
+  left: 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.next-btn {
+  right: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+.dots-container {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 3px 12px;
+  border-radius: 20px;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.active-dot {
+  background-color: #ffffff;
+  width: 10px;
+  height: 5px;
+  border-radius: 10px;
+}
+
+/* product data css */
+
+.card-content {
+  overflow: hidden;
+}
+
+.product-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 200px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+}
+
+.product-card img {
+  width: 50%;
+  height: auto;
+  transition: all 0.3s ease-in-out;
+}
+.product-card img:hover {
+  transform: scale(1.1);
+}
+
+.card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.product-card p {
+  color: #666;
+}
+
+.product-ads img {
+  width: 100%;
+  height: 350px;
+}
+
+.product-ads .container {
+  padding: 8px;
+}
+
+.product-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-title {
+  padding-bottom: 25px;
+}
+
+.product-title {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.02px;
+  font-family: inter_semi_bold, fallback-inter_semi_bold, Arial, sans-serif;
+}
+
+/* footer code */
+
+.footer {
+  background-color: #212121;
+  height: 100%;
+  width: 100%;
+}
+
+.footer .container {
+  background-color: #212121;
+  box-shadow: none;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid--footer {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  list-style: none;
+}
+
+.footer-heading {
+  font-size: 12px;
+  color: #666;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.footer-nav li a {
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-nav li a:hover {
+  border-bottom: 1px solid #fff;
+}
+.footer-nav p {
+  color: #f1f2f4;
+}
+
+.footer .container::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid #666;
+  margin-top: 50px; /* Adjust as needed for spacing */
+}
+
+.footer-hr::after {
+  content: "";
+  display: block;
+  border-right: 1px solid #666;
+  margin-left: 10px;
+  margin-right: 20px;
+  height: 100%;
+  margin-top: -100px;
+}
+
+.footer-policy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  margin-bottom: 25px;
+}
+
+.footer-policy a {
+  text-decoration: none;
+  color: #f1f2f4;
+  font-weight: 600;
+}
+
+.footer-policy p {
+  color: #f1f2f4;
+  font-weight: 600;
+}
+
+.footer-policy ion-icon {
+  height: 12px;
+  width: 12px;
+  color: #ddb814;
 }
