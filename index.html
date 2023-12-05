@@ -24,26 +24,40 @@
             <li><a class="main-nav-link" href="#"><img
                   src="/public/images/fkheaderlogo.svg"
                   alt="Flipkart Logo"></a></li>
-            <li><a class="main-nav-link" href="#"><span><ion-icon
-                    class="seach-icon"
-                    name="search-outline"></ion-icon></span><input
-                  type="search"
-                  placeholder="Search for Products, Brands and More"></a></li>
+                  <div class="search-outline">
+                    <div class="seach-input">
+
+                    <li><span><ion-icon
+                      class="seach-icon"
+                      name="search-outline"></ion-icon></span><a class="main-nav-link" href="#"><input
+                      type="search" id="searchBox"
+                      placeholder="Search for Products, Brands and More"></a></li>
+                   </div>
+
+                        <div class="recent-search" id="recentSearchContainer">
+                          <div class="container">
+                            <h5>Discover More</h5>
+                                <div id="trendingProductsContainer">
+                                  <!-- Dynamically Product added in this container -->
+                                </div>   
+                       </div>
+                </div>
+                    </div>
+              
             <div class="login-btn">
-              <li><a class="main-nav-link" href="#" id="login-btn"><span><ion-icon
+              <li class="login-nav"><a class="main-nav-link" href="#" id="login-btn"><span><ion-icon
                       name="person-circle-outline"></ion-icon></span>Login
-                  <ion-icon name="chevron-down-outline" class="arrow-down-icon"
-                    id="arrow-icon"></ion-icon><ion-icon
-                    name="chevron-up-outline" class="arrow-up-icon"></ion-icon></a></li>
+                  <ion-icon
+                    name="chevron-up-outline" class="arrow-up-icon" id="arrow-icon"></ion-icon></a></li>
               <div class="login-card" id="data">
                 <ul>
-                  <li>New Customer <a href="#">Sign Up</a></li><hr>
-                  <li><a href>My Profile</a></li>
-                  <li><a href>Flipkart Plus Zone</a></li>
-                  <li><a href>Orders</a></li>
-                  <li><a href>Wishlist</a></li>
-                  <li><a href>Rewards</a></li>
-                  <li><a href>Gift Cards</a></li>
+                  <li class="newCustomer">New Customer?<a href="#" class="signup-btn">Sign Up</a></li><hr><br>
+                  <li><span><ion-icon name="person-circle-outline"></ion-icon></span><a href>My Profile</a></li>
+                  <li><span><ion-icon name="aperture-outline"></ion-icon></span><a href>Flipkart Plus Zone</a></li>
+                  <li><span><ion-icon name="cube-outline"></ion-icon></span><a href>Orders</a></li>
+                  <li><span><ion-icon name="heart-outline"></ion-icon></span><a href>Wishlist</a></li>
+                  <li><span><ion-icon name="gift-outline"></ion-icon></span><a href>Rewards</a></li>
+                  <li><span><ion-icon name="cash-outline"></ion-icon></span><a href>Gift Cards</a></li>
                 </ul>
               </div>
             </div>
@@ -57,6 +71,7 @@
           </ul>
         </div>
       </nav>
+ 
     </header>
 
     <main>
@@ -143,7 +158,7 @@
         <div class="card-content">
           <div class="container">
             <div class="card-title">
-              <a href="/" class="product-title">Best of Electronic</a>
+              <a href="/" class="product-title" >Best of Electronic</a>
             </div>
             <div class="product-container">
 
