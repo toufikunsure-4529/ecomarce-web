@@ -1,0 +1,239 @@
+ <header>
+
+  <nav class="main-nav fixed-top">
+
+    <div class="nav-item">
+      <ul class="main-nav-list">
+        <li><a class="main-nav-link" href="#"><img
+              src="/public/images/fkheaderlogo.svg"
+              alt="Flipkart Logo"></a></li>
+
+        <div class="login-btn">
+          <li class="login-nav"><a class="main-nav-link" href="#" id="login-btn"><span><ion-icon
+                  name="person-circle-outline"></ion-icon></span>Login
+              <ion-icon
+                name="chevron-up-outline" class="arrow-up-icon" id="arrow-icon"></ion-icon></a></li>
+
+        </div>
+
+        <li><a class="main-nav-link" href="#"><span><ion-icon
+                name="cart-outline"></ion-icon></span>Cart</a></li>
+        <li><a class="main-nav-link" href="#"><span><ion-icon
+                name="storefront-outline"></ion-icon></span>Become a
+            seller</a></li>
+        <li><a class="main-nav-link" href="#">...</a></li>
+      </ul>
+    </div>
+  </nav>
+
+</header>
+
+.main-nav {
+width: 100%;
+height: 60px;
+background-color: #ffffff;
+font-size: 16px;
+padding: 7px 0;
+position: fixed;
+z-index: 9999;
+}
+
+.nav-item {
+width: 100vw;
+padding: 0;
+}
+.main-nav-list {
+display: flex;
+align-items: center;
+justify-content: center;
+list-style: none;
+gap: 23px;
+}
+
+.main-nav-link {
+text-decoration: none;
+font-size: 18px;
+line-height: 24px;
+color: rgb(61, 61, 61);
+display: flex;
+align-items: center;
+}
+
+.main-nav-link ion-icon {
+width: 24px;
+height: 24px;
+color: #000;
+margin-right: 8px;
+}
+
+.main-nav-list input {
+background-color: #f0f5ff;
+border-radius: 5px;
+text-overflow: ellipsis;
+padding-left: 35px;
+padding-right: 10px;
+border: 0;
+outline: 0 none;
+font-size: 17px;
+height: 40px;
+width: 50vw;
+}
+
+.seach-icon {
+position: absolute;
+top: 7px;
+color: #000;
+opacity: 0.5;
+margin-left: 3px;
+font-size: 23px;
+}
+.seach-input li {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.search-outline {
+position: relative;
+}
+
+.recent-search {
+display: none;
+}
+.recent-search.active {
+display: block;
+}
+
+.recent-search .container {
+height: 300px;
+width: 100%;
+border-radius: 3px;
+position: absolute;
+top: 30px;
+z-index: 9999;
+padding-left: 0;
+}
+
+.recent-search h5 {
+color: #666;
+margin-bottom: 5px;
+margin-left: 5px;
+}
+
+.recent-search ul {
+list-style: none;
+}
+
+.recent-search ul a {
+text-decoration: none;
+color: #666;
+font-size: 13px;
+}
+
+.recent-search ul li {
+display: flex;
+align-items: center;
+gap: 5px;
+margin-bottom: 5px;
+}
+.recent-search ul li:hover {
+background-color: #f0f5ff;
+}
+.recent-search li img {
+height: 40px;
+width: 30px;
+margin-left: 12px;
+}
+
+.login-btn {
+position: relative;
+}
+
+.login-card {
+width: 250px;
+height: 280px;
+border-radius: 3px;
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+padding: 8px;
+position: absolute;
+top: 40px;
+display: none;
+background-color: #ffffff;
+}
+
+.hover-card {
+display: block;
+}
+.login-card ul {
+margin-left: 10px;
+}
+.login-card li {
+list-style: none;
+display: flex;
+gap: 5px;
+margin-bottom: 16px;
+font-size: 16px;
+}
+
+.login-card li a {
+text-decoration: none;
+color: #000;
+font-size: 16px;
+}
+
+.login-card .newCustomer {
+display: flex;
+justify-content: space-between;
+margin-top: 5px;
+}
+
+.login-card li .signup-btn {
+color: #2a55e5;
+font-weight: 600;
+}
+
+#arrow-icon {
+transition: transform 0.4s ease-in-out;
+}
+
+.arrow-up-icon {
+transform: rotate(180deg);
+margin-left: 5px; /* Add margin for spacing */
+}
+
+.login-btn:hover .arrow-up-icon {
+transform: rotate(0deg);
+display: inline-block;
+}
+
+.login-btn:hover .login-nav {
+padding: 5px 0;
+background-color: #2a55e5;
+border-radius: 5px;
+color: #fff;
+}
+
+let loginBtn = document.querySelector("#login-btn");
+let loginCard = document.getElementById("data");
+
+loginBtn.addEventListener("mouseover", () => {
+loginCard.classList.add("hover-card")
+
+});
+
+loginCard.addEventListener("mouseleave", () => {
+loginCard.classList.remove("hover-card")
+});
+
+//search data to recent seach show div
+let searchBox = document.getElementById("searchBox")
+let recentSearchContainer = document.getElementById("recentSearchContainer")
+searchBox.addEventListener("focus", () => {
+recentSearchContainer.classList.add("active")
+})
+document.addEventListener("click", (event) => {
+if (!searchBox.contains(event.target) &&
+!recentSearchContainer.contains(event.target)) {
+recentSearchContainer.classList.remove("active");
+}
+});

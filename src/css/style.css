@@ -5,13 +5,8 @@
 }
 
 html {
-  /* font-size: 10px; */
-  /* 10px / 16px =0.625 =62.5% */
-  /* Percentage of user browser font -size seting */
   font-size: 62.5%;
   overflow-x: hidden;
-  /* Does not work form safari mac os */
-  scroll-behavior: smooth;
 }
 
 body {
@@ -20,35 +15,105 @@ body {
   font-weight: 400;
   color: #555;
   background-color: #f1f2f4;
-
-  /* Only work if there is nothing absolutely positioned in relation to body */
   overflow-x: hidden;
 }
 
 /* Navigation Menu */
-
-.main-nav {
-  width: 100%;
+.header {
+  padding: 0 48px;
   height: 60px;
-  background-color: #ffffff;
-  font-size: 16px;
-  padding: 7px 0;
-  position: fixed;
-  z-index: 9999;
-}
-
-.nav-item {
-  width: 100vw;
-  padding: 0;
-}
-.main-nav-list {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  list-style: none;
-  gap: 23px;
+  background-color: #fff;
 }
 
+.navbar-list {
+  display: flex;
+  gap: 48px;
+  list-style: none;
+}
+
+.navbar-link:link,
+.navbar-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #555;
+}
+
+.mobile-navbar-btn {
+  display: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.mobile-nav-icon {
+  width: 40px;
+  height: 40px;
+  color: #333;
+}
+
+.mobile-nav-icon[name="close-outline"] {
+  display: none;
+}
+
+/* nav responsive */
+
+@media (max-width: 980px) {
+  .mobile-navbar-btn {
+    display: block;
+    z-index: 999;
+  }
+
+  .header {
+    position: relative;
+  }
+  .header .logo {
+    width: 50%;
+  }
+  .navbar {
+    width: 50%;
+    height: 100vh;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    transform: translateX(-100%);
+    transition: all 0.5s linear;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .navbar-list {
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+  .active .navbar {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .active .mobile-navbar-btn .mobile-nav-icon[name="close-outline"] {
+    display: block;
+  }
+  .active .mobile-navbar-btn .mobile-nav-icon[name="menu-outline"] {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .header {
+    padding: 0 24px;
+  }
+}
 .main-nav-link {
   text-decoration: none;
   font-size: 18px;
@@ -65,7 +130,7 @@ body {
   margin-right: 8px;
 }
 
-.main-nav-list input {
+.navbar-list input {
   background-color: #f0f5ff;
   border-radius: 5px;
   text-overflow: ellipsis;
@@ -75,73 +140,21 @@ body {
   outline: 0 none;
   font-size: 17px;
   height: 40px;
-  width: 50vw;
+  width: 40vw;
 }
 
 .seach-icon {
   position: absolute;
-  top: 7px;
+  top: 18px;
   color: #000;
   opacity: 0.5;
   margin-left: 3px;
   font-size: 23px;
 }
-.seach-input li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.search-outline {
-  position: relative;
-}
-
-.recent-search {
-  display: none;
-}
-.recent-search.active {
-  display: block;
-}
-
-.recent-search .container {
-  height: 300px;
-  width: 100%;
-  border-radius: 3px;
-  position: absolute;
-  top: 30px;
-  z-index: 9999;
-  padding-left: 0;
-}
-
-.recent-search h5 {
-  color: #666;
-  margin-bottom: 5px;
-  margin-left: 5px;
-}
-
-.recent-search ul {
-  list-style: none;
-}
-
-.recent-search ul a {
-  text-decoration: none;
-  color: #666;
-  font-size: 13px;
-}
-
-.recent-search ul li {
+.navbar-list li {
   display: flex;
   align-items: center;
-  gap: 5px;
-  margin-bottom: 5px;
-}
-.recent-search ul li:hover {
-  background-color: #f0f5ff;
-}
-.recent-search li img {
-  height: 40px;
-  width: 30px;
-  margin-left: 12px;
 }
 
 .login-btn {
@@ -158,6 +171,7 @@ body {
   top: 40px;
   display: none;
   background-color: #ffffff;
+  z-index: 9999;
 }
 
 .hover-card {
@@ -212,10 +226,94 @@ body {
   color: #fff;
 }
 
+.search-outline {
+  position: relative;
+}
+
+.recent-search {
+  display: none;
+}
+.recent-search.active {
+  display: block;
+}
+
+.recent-search .container {
+  height: 300px;
+  width: 100%;
+  border-radius: 3px;
+  position: absolute;
+  top: 30px;
+  z-index: 9999;
+  padding-left: 0;
+}
+
+.recent-seacrch-title {
+  color: #666;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.recent-search ul {
+  list-style: none;
+}
+
+.recent-search ul a {
+  text-decoration: none;
+  color: #666;
+  font-size: 13px;
+}
+
+.recent-search ul li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+.recent-search ul li:hover {
+  background-color: #f0f5ff;
+}
+.recent-search li img {
+  height: 40px;
+  width: 30px;
+  margin-left: 12px;
+}
+.seach-icon {
+  position: absolute;
+  top: 7px;
+  color: #000;
+  opacity: 0.5;
+  margin-left: 3px;
+  font-size: 23px;
+}
+.seach-input li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot-log {
+  width: 2px;
+  height: 2px;
+  background-color: #000;
+  border-radius: 50%;
+  margin: 2px;
+}
+
+.nav-info {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
+.nav-info:hover {
+  background-color: #f7f7f7;
+  border: 1px solid #f1f2f4;
+}
+
 /* MAIN CONTENT REUUSE BODY */
 main {
   background-color: #f1f2f4;
-  padding: 65px 10px;
+  padding: 0px 10px;
   flex: 1; /* This will make sure main takes the remaining height */
 }
 
