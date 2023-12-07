@@ -1,351 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Ecomarce Web Flipkart</title>
-      <link rel="stylesheet" href="/src/css/style.css">
-      <link rel="stylesheet" href="/src/css/queries.css">
-
-      <!--icons CDN  script -->
-      <script type="module"
-         src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
-      <script nomodule
-         src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
-      <script defer
-         src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
-   </head>
-   <body>
-
-      <!-- ---------------------------------------- -->
-      <!-- PAGE HEADER NAVIGATION SECTION -->
-      <!-- ---------------------------------------- -->
-      <header class="header sticky">
-         <div class="mobile-navbar-btn">
-            <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
-            <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
-         </div>
-         <img src="/public/images/fkheaderlogo.svg" alt="Flipkart Logo"
-            class="logo">
-         <nav class="navbar">
-            <ul class="navbar-list">
-               <div class="search-outline">
-                  <div class="seach-input">
-                     <li>
-                        <span>
-                           <ion-icon class="seach-icon" name="search-outline"></ion-icon>
-                        </span>
-                        <input
-                           type="search" id="searchBox"
-                           placeholder="Search for Products, Brands and More">
-                     </li>
-                  </div>
-                  <div class="recent-search" id="recentSearchContainer">
-                     <div class="container">
-                        <h5 class="recent-seacrch-title">Discover More</h5>
-                        <div id="trendingProductsContainer">
-                           <!-- Dynamically Product added in this container -->
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="login-btn">
-                  <li class="login-nav">
-                     <a class="main-nav-link" href="#" id="login-btn">
-                        <span>
-                           <ion-icon
-                              name="person-circle-outline"></ion-icon>
-                        </span>
-                        Login
-                        <ion-icon
-                           name="chevron-up-outline" class="arrow-up-icon"
-                           id="arrow-icon"></ion-icon>
-                     </a>
-                  </li>
-                  <div class="login-card" id="data">
-                     <ul>
-                        <li class="newCustomer">New Customer?<a href="#"
-                              class="signup-btn">Sign Up</a></li>
-                        <hr>
-                        <br>
-                        <li>
-                           <span>
-                              <ion-icon name="person-circle-outline"></ion-icon>
-                           </span>
-                           <a
-                              href>My Profile</a>
-                        </li>
-                        <li>
-                           <span>
-                              <ion-icon name="aperture-outline"></ion-icon>
-                           </span>
-                           <a
-                              href>Flipkart Plus Zone</a>
-                        </li>
-                        <li>
-                           <span>
-                              <ion-icon name="cube-outline"></ion-icon>
-                           </span>
-                           <a href>Orders</a>
-                        </li>
-                        <li>
-                           <span>
-                              <ion-icon name="heart-outline"></ion-icon>
-                           </span>
-                           <a href>Wishlist</a>
-                        </li>
-                        <li>
-                           <span>
-                              <ion-icon name="gift-outline"></ion-icon>
-                           </span>
-                           <a href>Rewards</a>
-                        </li>
-                        <li>
-                           <span>
-                              <ion-icon name="cash-outline"></ion-icon>
-                           </span>
-                           <a href>Gift
-                              Cards</a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-               <li>
-                  <a class="main-nav-link" href="#">
-                     <span>
-                        <ion-icon
-                           name="cart-outline"></ion-icon>
-                     </span>
-                     Cart
-                  </a>
-               </li>
-               <li>
-                  <a class="main-nav-link" href="#" style="font-size: 13px;">
-                     <span>
-                        <ion-icon
-                           name="storefront-outline"></ion-icon>
-                     </span>
-                     Become a
-                     seller
-                  </a>
-               </li>
-               <li>
-                     <a class="main-nav-link nav-info" href="#"
-                       id="card-hover-btn">
-                        <span class="dot-log"></span>
-                        <span class="dot-log"></span>
-                        <span class="dot-log"></span>
-                     </a>
-                  </li>
-                  
-                  <div class="morelink-card" id="carddata">
-                     <ul>
-                        <li><span><ion-icon name="notifications-outline"></ion-icon></span><a
-                              href>Notification Performance</a></li>
-                        <li><span><ion-icon name="headset-outline"></ion-icon></span><a
-                              href>24x7 Customer Care</a></li>
-                        <li><span><ion-icon name="trending-up-outline"></ion-icon></span><a
-                              href>Advertise</a></li>
-                        <li><span><ion-icon name="download-outline"></ion-icon></span><a
-                              href>Download App</a></li>
-                     </ul>
-                  </div>
-               </ul>
-            </nav>
-         </header>
-
-         <!-- ---------------------------------------- -->
-         <!-- PAGE MAIN  SECTION -->
-         <!-- ---------------------------------------- -->
-         <main>
-
-            <!-- ---------------------------------------- -->
-            <!-- PAGE PRODUCT VIEW SUMMARY WISE -->
-            <!-- ---------------------------------------- -->
-            <section class="product-list">
-               <div class="container">
-                  <div class="product-content">
-                    
-                  </div>
-               </div>
-            </section>
-
-            <!-- ---------------------------------------- -->
-            <!-- PAGE SLIDER BANNER  SECTION -->
-            <!-- ---------------------------------------- -->
-            <section class="slider">
-               <div class="container">
-                  <div class="slide-img">
-                     <img src="/public/images/slide/slide-1.jpg" alt>
-                     <img src="/public/images/slide/slide-2.jpg" alt>
-                     <img src="/public/images/slide/slide-3.jpg" alt>
-                     <img src="/public/images/slide/slide-4.jpg" alt>
-                     <img src="/public/images/slide/slide-5.jpg" alt>
-                  </div>
-                  <div class="dots-container"></div>
-                  <button class="prev-btn" onclick="goPrev()">&lt;</button>
-                  <button class="next-btn" onclick="goNext()">&gt;</button>
-               </div>
-            </section>
-
-            <!-- ---------------------------------------- -->
-            <!-- PAGE PRODUCT VIEW   SECTION -->
-            <!-- ---------------------------------------- -->
-            <section class="product-section">
-               <!-- Dynamically Card Main container added -->
-             
-            </section>
-
-         </main>
-
-         <!-- ---------------------------------------- -->
-         <!-- PAGE FOOTER SECTION -->
-         <!-- ---------------------------------------- -->
-         <footer class="footer">
-            <div class="container ">
-               <div class="footer-content grid grid--footer">
-                  <nav class="nav-col">
-                     <p class="footer-heading">About</p>
-                     <ul class="footer-nav">
-                        <li><a class="footer-link" href="#">Contact Us</a></li>
-                        <li><a class="footer-link" href="#">About Us</a></li>
-                        <li><a class="footer-link" href="#">Careers</a></li>
-                        <li><a class="footer-link" href="#">Press</a></li>
-                        <li><a class="footer-link" href="#">Flipkart Wholesale</a></li>
-                        <li><a class="footer-link" href="#">Cleartrip</a></li>
-                        <li><a class="footer-link" href="#">Corporate
-                              Information</a></li>
-                     </ul>
-                  </nav>
-                  <nav class="nav-col">
-                     <p class="footer-heading">Help</p>
-                     <ul class="footer-nav">
-                        <li><a class="footer-link" href="#">Payement</a></li>
-                        <li><a class="footer-link" href="#">Shopping</a></li>
-                        <li><a class="footer-link" href="#">Cancellation &
-                              Returns</a></li>
-                        <li><a class="footer-link" href="#">FAQ</a></li>
-                        <li><a class="footer-link" href="#">Report Infringement</a></li>
-                     </ul>
-                  </nav>
-                  <nav class="nav-col">
-                     <p class="footer-heading">Consumer Policy</p>
-                     <ul class="footer-nav">
-                        <li><a class="footer-link" href="#">Cancellation &
-                              Returns</a></li>
-                        <li><a class="footer-link" href="#">Term Of Use</a></li>
-                        <li><a class="footer-link" href="#">Security</a></li>
-                        <li><a class="footer-link" href="#">Privacy</a></li>
-                        <li><a class="footer-link" href="#">Sitemap</a></li>
-                        <li><a class="footer-link" href="#">Grievance Redressal</a></li>
-                        <li><a class="footer-link" href="#">EPR complaince</a></li>
-                     </ul>
-                  </nav>
-                  <nav class="nav-col">
-                     <p class="footer-heading">Social</p>
-                     <ul class="footer-nav">
-                        <li>
-                           <p class="footer-link">Flipkart Internet Private
-                              Limited,
-                           </p>
-                        </li>
-                        <li>
-                           <p class="footer-link"> Clove Embassy Tech Village,
-                           </p>
-                        </li>
-                        <li>
-                           <p class="footer-link"> Bengaluru, 560103, </p>
-                        </li>
-                        <li>
-                           <p class="footer-link"> Karnataka, India </p>
-                        </li>
-                     </ul>
-                     <span class="footer-hr"></span>
-                  </nav>
-                  <nav class="nav-col">
-                     <p class="footer-heading">Mail Us</p>
-                     <ul class="footer-nav">
-                        <li>
-                           <p class="footer-link" href="#">Flipkart Internet
-                              Private
-                              Limited,
-                           </p>
-                        </li>
-                        <li>
-                           <p class="footer-link" href="#"> Buildings Alyssa,
-                              Begonia &
-                           </p>
-                        </li>
-                        <li>
-                           <p class="footer-link" href="#"> Clove Embassy Tech
-                              Village,
-                           </p>
-                        </li>
-                        <li>
-                           <p class="footer-link" href="#"> Bengaluru, 560103,
-                           </p>
-                        </li>
-                        <li>
-                           <p class="footer-link" href="#"> Karnataka, India
-                           </p>
-                        </li>
-                        <li>
-                           <p class="footer-link" href="#"> CIN :
-                              U51109KA2012PTC066107
-                           </p>
-                        </li>
-                        <li>
-                           <p class="footer-link"> Telephone: <a
-                                 href="tel:044-45614700">044-45614700</a></p>
-                        </li>
-                     </ul>
-                  </nav>
-                  <nav class="nav-col">
-                     <p class="footer-heading">Registered Official Address</p>
-                     <ul class="footer-nav">
-                        <li><a class="footer-link" href="#">Payement</a></li>
-                        <li><a class="footer-link" href="#">Shopping</a></li>
-                        <li><a class="footer-link" href="#">Cancellation &
-                              Returns</a></li>
-                        <li><a class="footer-link" href="#">FAQ</a></li>
-                        <li><a class="footer-link" href="#">Report Infringement</a></li>
-                     </ul>
-                  </nav>
-               </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Ecomarce Web Flipkart</title>
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <link rel="stylesheet" href="/src/css/queries.css" />
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+    <script defer="defer" src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+  </head>
+  <body>
+    <header class="header sticky">
+      <div class="mobile-navbar-btn"><ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon><ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon></div>
+      <img src="/public/images/fkheaderlogo.svg" alt="Flipkart Logo" class="logo" />
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <div class="search-outline">
+            <div class="seach-input">
+              <li>
+                <span><ion-icon class="seach-icon" name="search-outline"></ion-icon></span><input type="search" id="searchBox" placeholder="Search for Products, Brands and More" />
+              </li>
             </div>
-            <div class="footer-policy">
-               <a href="#">
-                  <span>
-                     <ion-icon
-                        name="storefront-outline"></ion-icon>
-                  </span>
-                  Become Seller
-               </a>
-               <a href="#">
-                  <span>
-                     <ion-icon name="map-outline"></ion-icon>
-                  </span>
-                  Advertise
-               </a>
-               <a href="#">
-                  <span>
-                     <ion-icon name="gift-outline"></ion-icon>
-                  </span>
-                  Gift
-                  Card
-               </a>
-               <a href="#">
-                  <span>
-                     <ion-icon name="help-circle-outline"></ion-icon>
-                  </ion-icon>
-               </span>
-               Help Center
+            <div class="recent-search" id="recentSearchContainer">
+              <div class="container">
+                <h5 class="recent-seacrch-title">Discover More</h5>
+                <div id="trendingProductsContainer"></div>
+              </div>
+            </div>
+          </div>
+          <div class="login-btn">
+            <li class="login-nav">
+              <a class="main-nav-link" href="#" id="login-btn">
+                <span><ion-icon name="person-circle-outline"></ion-icon></span>Login<ion-icon name="chevron-up-outline" class="arrow-up-icon" id="arrow-icon"></ion-icon>
+              </a>
+            </li>
+            <div class="login-card" id="data">
+              <ul>
+                <li class="newCustomer">New Customer?<a href="#" class="signup-btn">Sign Up</a></li>
+                <hr />
+                <br />
+                <li>
+                  <span><ion-icon name="person-circle-outline"></ion-icon></span><a href>My Profile</a>
+                </li>
+                <li>
+                  <span><ion-icon name="aperture-outline"></ion-icon></span><a href>Flipkart Plus Zone</a>
+                </li>
+                <li>
+                  <span><ion-icon name="cube-outline"></ion-icon></span><a href>Orders</a>
+                </li>
+                <li>
+                  <span><ion-icon name="heart-outline"></ion-icon></span><a href>Wishlist</a>
+                </li>
+                <li>
+                  <span><ion-icon name="gift-outline"></ion-icon></span><a href>Rewards</a>
+                </li>
+                <li>
+                  <span><ion-icon name="cash-outline"></ion-icon></span><a href>Gift Cards</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <li>
+            <a class="main-nav-link" href="#">
+              <span><ion-icon name="cart-outline"></ion-icon></span>Cart
             </a>
-            <p>&copy; 2007-2023 Devloped By Toufik</p>
-            <img src="/public/images/payment-method.svg" alt>
-         </div>
-      </footer>
-      <script src="/src/js/script.js"></script>
-      <script src="/src/js/product.js"></script>
-   </body>
+          </li>
+          <li>
+            <a class="main-nav-link" href="#" style="font-size: 13px;">
+              <span><ion-icon name="storefront-outline"></ion-icon></span>Become a seller
+            </a>
+          </li>
+          <li>
+            <a class="main-nav-link nav-info" href="#" id="card-hover-btn"><span class="dot-log"></span><span class="dot-log"></span><span class="dot-log"></span></a>
+          </li>
+          <div class="morelink-card" id="carddata">
+            <ul>
+              <li>
+                <span><ion-icon name="notifications-outline"></ion-icon></span><a href>Notification Performance</a>
+              </li>
+              <li>
+                <span><ion-icon name="headset-outline"></ion-icon></span><a href>24x7 Customer Care</a>
+              </li>
+              <li>
+                <span><ion-icon name="trending-up-outline"></ion-icon></span><a href>Advertise</a>
+              </li>
+              <li>
+                <span><ion-icon name="download-outline"></ion-icon></span><a href>Download App</a>
+              </li>
+            </ul>
+          </div>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="product-list">
+        <div class="container"><div class="product-content"></div></div>
+      </section>
+      <section class="slider">
+        <div class="container">
+          <div class="slide-img">
+            <img src="/public/images/slide/slide-1.jpg" alt /> <img src="/public/images/slide/slide-2.jpg" alt /> <img src="/public/images/slide/slide-3.jpg" alt /> <img src="/public/images/slide/slide-4.jpg" alt />
+            <img src="/public/images/slide/slide-5.jpg" alt />
+          </div>
+          <div class="dots-container"></div>
+          <button class="prev-btn" onclick="goPrev()">&lt;</button><button class="next-btn" onclick="goNext()">&gt;</button>
+        </div>
+      </section>
+      <section class="product-section"></section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content grid grid--footer">
+          <nav class="nav-col">
+            <p class="footer-heading">About</p>
+            <ul class="footer-nav">
+              <li><a class="footer-link" href="#">Contact Us</a></li>
+              <li><a class="footer-link" href="#">About Us</a></li>
+              <li><a class="footer-link" href="#">Careers</a></li>
+              <li><a class="footer-link" href="#">Press</a></li>
+              <li><a class="footer-link" href="#">Flipkart Wholesale</a></li>
+              <li><a class="footer-link" href="#">Cleartrip</a></li>
+              <li><a class="footer-link" href="#">Corporate Information</a></li>
+            </ul>
+          </nav>
+          <nav class="nav-col">
+            <p class="footer-heading">Help</p>
+            <ul class="footer-nav">
+              <li><a class="footer-link" href="#">Payement</a></li>
+              <li><a class="footer-link" href="#">Shopping</a></li>
+              <li><a class="footer-link" href="#">Cancellation & Returns</a></li>
+              <li><a class="footer-link" href="#">FAQ</a></li>
+              <li><a class="footer-link" href="#">Report Infringement</a></li>
+            </ul>
+          </nav>
+          <nav class="nav-col">
+            <p class="footer-heading">Consumer Policy</p>
+            <ul class="footer-nav">
+              <li><a class="footer-link" href="#">Cancellation & Returns</a></li>
+              <li><a class="footer-link" href="#">Term Of Use</a></li>
+              <li><a class="footer-link" href="#">Security</a></li>
+              <li><a class="footer-link" href="#">Privacy</a></li>
+              <li><a class="footer-link" href="#">Sitemap</a></li>
+              <li><a class="footer-link" href="#">Grievance Redressal</a></li>
+              <li><a class="footer-link" href="#">EPR complaince</a></li>
+            </ul>
+          </nav>
+          <nav class="nav-col">
+            <p class="footer-heading">Social</p>
+            <ul class="footer-nav">
+              <li><p class="footer-link">Flipkart Internet Private Limited,</p></li>
+              <li><p class="footer-link">Clove Embassy Tech Village,</p></li>
+              <li><p class="footer-link">Bengaluru, 560103,</p></li>
+              <li><p class="footer-link">Karnataka, India</p></li>
+            </ul>
+            <span class="footer-hr"></span>
+          </nav>
+          <nav class="nav-col">
+            <p class="footer-heading">Mail Us</p>
+            <ul class="footer-nav">
+              <li><p class="footer-link" href="#">Flipkart Internet Private Limited,</p></li>
+              <li><p class="footer-link" href="#">Buildings Alyssa, Begonia &</p></li>
+              <li><p class="footer-link" href="#">Clove Embassy Tech Village,</p></li>
+              <li><p class="footer-link" href="#">Bengaluru, 560103,</p></li>
+              <li><p class="footer-link" href="#">Karnataka, India</p></li>
+              <li><p class="footer-link" href="#">CIN : U51109KA2012PTC066107</p></li>
+              <li>
+                <p class="footer-link">Telephone:<a href="tel:044-45614700">044-45614700</a></p>
+              </li>
+            </ul>
+          </nav>
+          <nav class="nav-col">
+            <p class="footer-heading">Registered Official Address</p>
+            <ul class="footer-nav">
+              <li><a class="footer-link" href="#">Payement</a></li>
+              <li><a class="footer-link" href="#">Shopping</a></li>
+              <li><a class="footer-link" href="#">Cancellation & Returns</a></li>
+              <li><a class="footer-link" href="#">FAQ</a></li>
+              <li><a class="footer-link" href="#">Report Infringement</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-policy">
+        <a href="#">
+          <span><ion-icon name="storefront-outline"></ion-icon></span>Become Seller
+        </a>
+        <a href="#">
+          <span><ion-icon name="map-outline"></ion-icon></span>Advertise
+        </a>
+        <a href="#">
+          <span><ion-icon name="gift-outline"></ion-icon></span>Gift Card
+        </a>
+        <a href="#">
+          <span><ion-icon name="help-circle-outline"></ion-icon></span>Help Center
+        </a>
+        <p>&copy; 2007-2023 Devloped By Toufik</p>
+        <img src="/public/images/payment-method.svg" alt />
+      </div>
+    </footer>
+    <script src="/src/js/script.js"></script>
+    <script src="/src/js/product.js"></script>
+  </body>
 </html>
