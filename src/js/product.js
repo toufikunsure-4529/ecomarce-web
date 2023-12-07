@@ -1,4 +1,45 @@
-//MAIN PRIODUCUT LIST ON AFTER SLIDER
+//SECOND SECTION PRODUCT CONTAINER DYNAMACALLY ADDED DUE RE USE
+
+let sectionCardItem = [
+  {
+    title: "Best of Electronic",
+    ads: "/public/images/main-prod/offer-flight.jpg"
+  },
+  {
+    title: "Beauty, Food, Toys & more",
+    ads: "/public/images/main-prod/offer-flight.jpg"
+  }
+
+]
+
+let sectionCardContainer = document.querySelector(".product-section")
+let sectionCardHTML = "";
+sectionCardItem.forEach((card) => {
+  sectionCardHTML += `
+      <div class="product-section-content">
+         <div class="card-content">
+                  <div class="container">
+                     <div class="card-title">
+                        <a href="/" class="product-title">${card.title}</a>
+                     </div>
+                     <div class="product-container">
+                        <!-- DYNAMICALLY JAVASCRIPT PRODUCT ADDED -->
+                     </div>
+                  </div>
+               </div>
+                 <div class="product-ads">
+                  <div class="container">
+                     <img src="${card.ads}" alt>
+                  </div>
+               </div>
+               </div>
+  `
+  sectionCardContainer.innerHTML = sectionCardHTML
+})
+
+
+
+//MAIN PRIODUCUT LIST ON AFTER SLIDER SECOND PRODUCT SECTION
 let product = [
   {
     title: "Mouse",
@@ -48,7 +89,6 @@ let product = [
     description: "Mechanical Gaming Keyboard",
     price: "₹499"
   },
-  // Add more products with unique titles
 ];
 
 let productContainers = document.querySelectorAll(".product-container");
@@ -69,21 +109,16 @@ productContainers.forEach((container) => {
 
 
 const cards = document.getElementsByClassName("product-card");
-
 for (const card of cards) {
   card.addEventListener("click", () => {
-    setTimeout(() => {
-      window.location = "/"
-
-    }, 1000)
+    window.location = "/"
   });
 }
 
 
 
-//PRODUCR LIST BEFORE SLIDER
 
-//recent search container store product
+//SEARCH PRODUCT TO CLICK SEARCH AFTER VIEW CONTENET PRODUCT RECCENT SEARCH
 let trendingProduct = [
   {
     images: "https://rukminim1.flixcart.com/image/100/100/xif0q/mobile/k/u/n/-original-imagzjhwtfthcmzz.jpeg?q=90",
@@ -118,3 +153,98 @@ trendingProduct.forEach((item) => {
 })
 
 trendingProductsContainer.innerHTML = terndingProductHtml;
+
+
+
+
+
+//Frist Product List
+let productList = [
+  {
+    images: "/public/images/product/grocery.png",
+    title: "Grocery",
+    icon: ""
+  }
+  ,
+  {
+    images: "/public/images/product/mobile.png",
+    title: "Mobile",
+    icon: ""
+
+  }
+  ,
+  {
+    images: "/public/images/product/fashion.png",
+    title: "Fashion",
+    categories: ["Mens Top Wear", "Women Wastern", "Kides", "Men Footweare"],
+    categoriesProduct: ["All", "Trimer", "Hair Dryers"],
+    icon: `<ion-icon name="chevron-up-outline" class="arrow-up-icon"></ion-icon>`
+  },
+  {
+    images: "/public/images/product/electronic.png",
+    title: "Electronics",
+    categories: ["Mens Top Wear", "Women Wastern", "Kides", "Men Footweare"],
+    categoriesProduct: ["All", "Trimer", "Hair Dryers"],
+    icon: `<ion-icon name="chevron-up-outline" class="arrow-up-icon"></ion-icon>`
+
+  }
+  ,
+  {
+    images: "/public/images/product/home-furniture.jpg",
+    title: "Home & Furniture",
+    categories: ["Mens Top Wear", "Women Wastern", "Kides", "Men Footweare"],
+    categoriesProduct: ["All", "Trimer", "Hair Dryers"],
+    icon: `<ion-icon name="chevron-up-outline" class="arrow-up-icon"></ion-icon>`
+
+  }
+  ,
+  {
+    images: "/public/images/product/applience.jpg",
+    title: "Appliences",
+    categories: ["Mens Top Wear", "Women Wastern", "Kides", "Men Footweare"],
+    categoriesProduct: ["All", "Trimer", "Hair Dryers"],
+    icon: `<ion-icon name="chevron-up-outline" class="arrow-up-icon"></ion-icon>`
+
+  }
+  ,
+  {
+    images: "/public/images/product/travel.png",
+    title: "Travel",
+    icon: ""
+
+
+  }
+  ,
+  {
+    images: "/public/images/product/toys-beauty.png",
+    title: "Beauty,Toys & More ",
+    categories: ["Mens Top Wear", "Women Wastern", "Kides", "Men Footweare"],
+    categoriesProduct: ["All", "Trimer", "Hair Dryers"],
+    icon: `<ion-icon name="chevron-up-outline" class="arrow-up-icon"></ion-icon>`
+
+  }
+  ,
+  {
+    images: "/public/images/product/two-wheller.png",
+    title: "Two Wheelers",
+    categories: ["Mens Top Wear", "Women Wastern", "Kides", "Men Footweare"],
+    categoriesProduct: ["All", "Trimer", "Hair Dryers"],
+    icon: `<ion-icon name="chevron-up-outline" class="arrow-up-icon"></ion-icon>`
+
+  }
+]
+
+let productListCotainer = document.querySelector(".product-content")
+let productListHTML = ""
+
+productList.forEach((productItem) => {
+  productListHTML += `
+  <div class="prod-list">
+                        <img src="${productItem.images}" alt="${productItem.title}">
+                        <p>${productItem.title}<span>${productItem.icon}</span></p>
+                     </div>
+  `
+  productListCotainer.innerHTML = productListHTML
+})
+
+

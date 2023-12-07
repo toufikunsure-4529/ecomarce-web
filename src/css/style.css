@@ -18,7 +18,10 @@ body {
   overflow-x: hidden;
 }
 
-/* Navigation Menu */
+/* <!-- ---------------------------------------- -->
+                <!-- PAGE NAVIGATION SECTION -->
+      <!-- ---------------------------------------- --> */
+
 .header {
   padding: 0 48px;
   height: 60px;
@@ -27,11 +30,20 @@ body {
   align-items: center;
   background-color: #fff;
 }
+.sticky {
+  position: fixed;
+  z-index: 99999;
+}
+.logo {
+  margin-right: 40px;
+}
 
 .navbar-list {
   display: flex;
   gap: 48px;
   list-style: none;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar-link:link,
@@ -59,61 +71,6 @@ body {
   display: none;
 }
 
-/* nav responsive */
-
-@media (max-width: 980px) {
-  .mobile-navbar-btn {
-    display: block;
-    z-index: 999;
-  }
-
-  .header {
-    position: relative;
-  }
-  .header .logo {
-    width: 50%;
-  }
-  .navbar {
-    width: 50%;
-    height: 100vh;
-    background-color: #fff;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 99;
-    transform: translateX(-100%);
-    transition: all 0.5s linear;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-  }
-  .navbar-list {
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-  }
-  .active .navbar {
-    transform: translateX(0);
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-  }
-  .active .mobile-navbar-btn .mobile-nav-icon[name="close-outline"] {
-    display: block;
-  }
-  .active .mobile-navbar-btn .mobile-nav-icon[name="menu-outline"] {
-    display: none;
-  }
-}
-
-@media (max-width: 560px) {
-  .header {
-    padding: 0 24px;
-  }
-}
 .main-nav-link {
   text-decoration: none;
   font-size: 18px;
@@ -310,10 +267,50 @@ body {
   border: 1px solid #f1f2f4;
 }
 
-/* MAIN CONTENT REUUSE BODY */
+.more-info-btn {
+  position: relative;
+}
+.morelink-card {
+  height: 150px;
+  width: 200px;
+  background-color: #ffff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 3px;
+  padding: 8px;
+  position: absolute;
+  top: 45px;
+  right: 20px;
+
+  z-index: 9999;
+  display: none;
+}
+
+.morelink-card li {
+  list-style: none;
+  display: flex;
+  gap: 5px;
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.morelink-card li a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #000;
+}
+
+.activemore {
+  display: block;
+}
+
+/* <-------------------------------> */
+/* PAGE MAIN SECTION */
+/* <-------------------------------> */
+
 main {
   background-color: #f1f2f4;
   padding: 0px 10px;
+  margin-top: 70px;
   flex: 1; /* This will make sure main takes the remaining height */
 }
 
@@ -325,22 +322,39 @@ main {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* product list images css */
 main p {
   margin-bottom: 20px;
 }
 
+/* PAGE FIRST PRODUCT VIEW  */
 .product-content {
   display: flex;
-  justify-content: space-around;
-  padding: 0 15px;
+  overflow: auto;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.prod-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
 }
 .prod-list img {
-  height: 58px;
-  width: 58px;
+  height: 65px;
+  width: 65px;
 }
 
-/* slider images css */
+.prod-list p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+/* SLIDER BANNER CSS */
+
 .slider .container {
   position: relative;
   overflow: hidden;
@@ -410,10 +424,14 @@ main p {
   border-radius: 10px;
 }
 
-/* product data css */
+/* ALL PRODUCT VIEW SECOND SECTION CODE */
 
 .card-content {
-  overflow: hidden;
+  overflow: auto;
+}
+
+.card-content::-webkit-scrollbar {
+  display: none;
 }
 
 .product-container {
@@ -421,25 +439,29 @@ main p {
   justify-content: center;
   align-items: center;
   gap: 5px;
-  width: 100vw;
+  width: 100%;
+  height: 100%;
   /* white-space: nowrap;
   overflow-x: auto; */
 }
 
-/* .product-container::-webkit-scrollbar {
-  display: none;
-} */
-
 .product-card {
-  background-color: #fff;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   border: 1px solid #bbb;
+  height: 212px;
+  width: 160px;
+  padding: 6px;
+  cursor: pointer;
 }
 
 .product-card img {
-  width: 50%;
-  height: auto;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 16px;
   transition: all 0.3s ease-in-out;
 }
 .product-card img:hover {
@@ -461,7 +483,7 @@ main p {
 }
 
 .product-ads img {
-  width: 230px;
+  width: 100%;
   height: 280px;
 }
 
@@ -469,7 +491,7 @@ main p {
   padding: 8px 2px;
 }
 
-.product-section {
+.product-section-content {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -489,7 +511,7 @@ main p {
   font-family: inter_semi_bold, fallback-inter_semi_bold, Arial, sans-serif;
 }
 
-/* footer code */
+/* PAGE FOOTER CODE */
 
 .footer {
   background-color: #212121;

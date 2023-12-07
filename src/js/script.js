@@ -1,4 +1,4 @@
-//slider images 
+//SLIDER BANNER CODE
 const slideContainer = document.querySelector(".slide-img");
 const images = document.querySelectorAll(".slide-img img");
 let currentIndex = 0;
@@ -52,7 +52,7 @@ mobileNav.addEventListener("click", () => {
 
 
 
-
+//NAVIGATION BAR LOGIN TO HOVER SOME CONTENT VIEW
 let loginBtn = document.querySelector("#login-btn");
 let loginCard = document.getElementById("data");
 
@@ -65,7 +65,7 @@ loginCard.addEventListener("mouseleave", () => {
   loginCard.classList.remove("hover-card")
 });
 
-//search data to recent seach show div
+//NAVAGATION MENU SEACH INPUT CLICK TO SOME SCRIPT WORK DISPLAY NONE& BLOCK
 let searchBox = document.getElementById("searchBox")
 let recentSearchContainer = document.getElementById("recentSearchContainer")
 searchBox.addEventListener("focus", () => {
@@ -79,4 +79,15 @@ document.addEventListener("click", (event) => {
 });
 
 
+let moreInfoBtn = document.querySelector("#card-hover-btn")
+let moreInfoCard = document.querySelector("#carddata")
+moreInfoBtn.addEventListener("mouseover", () => {
+  moreInfoCard.classList.add("activemore")
+})
+
+moreInfoBtn.addEventListener("mouseleave", () => {
+  setTimeout(() => {
+    moreInfoCard.classList.remove("activemore")
+  }, 1000)
+})
 

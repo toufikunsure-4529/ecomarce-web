@@ -1,0 +1,107 @@
+@media (max-width: 980px) {
+  .mobile-navbar-btn {
+    display: block;
+    z-index: 999;
+  }
+
+  .header {
+    position: relative;
+  }
+  .header .logo {
+    width: 50%;
+  }
+  main {
+    margin-top: 0;
+  }
+  .logo {
+    margin-right: 0;
+  }
+  .navbar {
+    width: 50%;
+    height: 100vh;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    transform: translateX(-100%);
+    transition: all 0.5s linear;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .navbar-list {
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+  .active .navbar {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .active .mobile-navbar-btn .mobile-nav-icon[name="close-outline"] {
+    display: block;
+  }
+  .active .mobile-navbar-btn .mobile-nav-icon[name="menu-outline"] {
+    display: none;
+  }
+  .product-ads img {
+    display: none;
+  }
+  .product-container {
+    overflow: auto;
+  }
+  .card-content {
+    overflow: visible;
+  }
+  .prev-btn,
+  .next-btn {
+    visibility: hidden;
+  }
+  .grid--footer {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+  }
+  .footer-nav {
+    gap: 0px;
+  }
+  .footer .container::after {
+    margin-top: 16px;
+  }
+  .footer .container {
+    padding: 10px;
+  }
+  .footer-heading {
+    font-size: 5px;
+  }
+  .footer-nav li a,
+  p {
+    font-weight: 400;
+    font-size: 5px;
+  }
+  .footer-policy {
+    gap: 8px;
+  }
+  .footer-policy img {
+    width: 25%;
+  }
+  .footer-policy a {
+    font-weight: 400;
+    font-size: 5px;
+  }
+  .footer-policy ion-icon {
+    height: 5px;
+    width: 5px;
+  }
+}
+
+@media (max-width: 560px) {
+  .header {
+    padding: 0 14px;
+  }
+}
