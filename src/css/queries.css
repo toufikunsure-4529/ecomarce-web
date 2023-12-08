@@ -98,6 +98,35 @@
     height: 5px;
     width: 5px;
   }
+
+  .prod-list img {
+    height: 35px;
+    width: 35px;
+  }
+  .prod-list p{
+    font-size: 5px;
+
+  }
+  .product-list .container{
+    padding: 8px;
+
+  }
+
+  
+  .data-refresh-btn{
+    padding: 3px 10px;
+  }
+
+
+  .refresh-outline{
+    font-size: 8px;
+  
+  }
+  .logo {
+    height: 50%;
+  }
+
+
 }
 
 @media (max-width: 560px) {

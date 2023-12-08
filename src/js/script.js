@@ -91,3 +91,9 @@ moreInfoBtn.addEventListener("mouseleave", () => {
   }, 1000)
 })
 
+let dataRefresh=document.getElementById("data-refresh")
+setTimeout(()=>{
+
+  dataRefresh.style.opacity=1
+},5000)
+
