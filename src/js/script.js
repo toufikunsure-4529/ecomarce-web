@@ -65,6 +65,12 @@ loginCard.addEventListener("mouseleave", () => {
   loginCard.classList.remove("hover-card")
 });
 
+loginBtn.addEventListener("click",(e)=>{
+  e.preventDefault()
+  location.href = "/login.html";
+})
+
+
 //NAVAGATION MENU SEACH INPUT CLICK TO SOME SCRIPT WORK DISPLAY NONE& BLOCK
 let searchBox = document.getElementById("searchBox")
 let recentSearchContainer = document.getElementById("recentSearchContainer")
@@ -96,4 +102,5 @@ setTimeout(()=>{
 
   dataRefresh.style.opacity=1
 },5000)
+
 
