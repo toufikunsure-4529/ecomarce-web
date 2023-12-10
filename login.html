@@ -1,41 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <link rel="stylesheet" href="/src/css/login.css">
-</head>
-<body>
-  <div class="container">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/src/css/login.css">
+  </head>
+  <body>
+    <div class="container">
 
-    
-    <div class="left-content">
-      <p class="left-content-title">Login</p>
-      <p class="left-content-txt">
-        Get access to your Orders, Wishlist and Recommendations</p>
-      <div class="left-content-bg-img" role="img" aria-level="Login Images"></div>
-    </div>
+      <div class="left-content">
+        <p class="left-content-title">Login</p>
+        <p class="left-content-txt">
+          Get access to your Orders, Wishlist and Recommendations</p>
+        <div class="left-content-bg-img" role="img" aria-level="Login Images"></div>
+      </div>
 
+      <div class="right-content" id="right-container">
+        <div class="right-content-form">
+          <form autocomplete="on">
+            <div class="right-content-input-container">
+              <input type="text" class="input-elem" id="inputUser-Mob-email"
+                placeholder="Enter Email/Mobile number">
+                <label class="mobNo-area-code" id="mob-code">+91</label>
+                <div id="errorDiv"></div>
+              <span class="form-terms-txt">By continuing, you agree to Flipkart's
+                <a href="#">Terms of Use</a> and <a href="#">Privacy Policy.</a></span>
+              <button class="right-content-btn" id="requestOtpBtn">Request OTP</button>
+            </div>
+          </form>
+        </div>
+        <div class="right-content-signup-link">
+          <a href="#">New to Flipkart? Create an account</a>
+        </div>
+      </div>
 
-    <div class="right-content" id="right-container">
-      <div class="right-content-form">
-        <form autocomplete="on">
-          <div class="right-content-input-container">
-            <input type="text" class="input-elem" id="placeholderInput" placeholder="Enter Email/Mobile number"  required>
-            <span class="form-terms-txt">By continuing, you agree to Flipkart's <a href="#">Terms of Use</a> and <a href="#">Privacy Policy.</a></span>
-            <button class="right-content-btn" id="requestOtpBtn">Request OTP</button>
+      <div class="fetch-otp-container" id="otp-fetchContainer" >
+        <div class="fetch-otp-content">
+          <p class="form-title">Please enter the OTP sent to</p>
+          <div class="form-userId">
+            <span class="login-id" id="inputValue">.</span>
+            <a href="#" id="changeUserId">Change</a>
           </div>
-        </form>
+          <form autocomplete="off">
+            <div class="fetch-content-form">
+              <input type="text">
+              <input type="text">
+              <input type="text">
+              <input type="text">
+              <input type="text">
+              <input type="text">
+            </div>
+            <button class="otp-submit-btn">Verify</button>
+            <div class="resend-otp-content">
+              <span class="resend-txt">Not received your code?</span>
+              <span class="resend-code"></span>
+            </div>
+          </form>
+        </div>
+       
       </div>
-      <div class="right-content-signup-link">
-        <a href="#">New to Flipkart? Create an account</a>
+      <div id="userNotifiedContainer">
+      <div class="notificatin-content">
+        <div class="successIcon">
+          <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMjAnIGhlaWdodD0nMjAnIHZpZXdCb3g9JzAgMCAyMCAyMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz4KCTxnPgoJCTxwYXRoIGQ9J00tMi0yaDI0djI0SC0yeicgZmlsbD0nbm9uZScvPgoJCTxwYXRoIGQ9J00xMCAwQzQuNDggMCAwIDQuNDggMCAxMHM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTUuNTIgMCAxMCAwek04IDE1bC01LTUgMS40MS0xLjQxTDggMTIuMTdsNy41OS03LjU5TDE3IDZsLTkgOXonIGZpbGw9JyMyNkJDNEUnLz4KCTwvZz4KPC9zdmc+Cg==" class="Rym-jM"></div>
+          <div class="notificatinMsg"></div>
       </div>
     </div>
-    
-  </div>
+    </div>
 
-
- <script src="/src/js/login.js"></script>
-</body>
+    <script src="/src/js/login.js"></script>
+  </body>
 </html>
