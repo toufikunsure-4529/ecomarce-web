@@ -44,12 +44,12 @@
           </div>
           <form autocomplete="off">
             <div class="fetch-content-form">
-              <input type="text">
-              <input type="text">
-              <input type="text">
-              <input type="text">
-              <input type="text">
-              <input type="text">
+              <input type="text" maxlength="1" oninput="inputValidation(this)" class="inputBoxOtp" required>
+              <input type="text" maxlength="1" oninput="inputValidation(this)" class="inputBoxOtp" required>
+              <input type="text" maxlength="1" oninput="inputValidation(this)" class="inputBoxOtp" required>
+              <input type="text" maxlength="1" oninput="inputValidation(this)" class="inputBoxOtp" required>
+              <input type="text" maxlength="1" oninput="inputValidation(this)" class="inputBoxOtp" required>
+              <input type="text" maxlength="1" oninput="inputValidation(this)" class="inputBoxOtp" required>
             </div>
             <button class="otp-submit-btn">Verify</button>
             <div class="resend-otp-content">
@@ -57,13 +57,15 @@
               <span class="resend-code"></span>
             </div>
           </form>
+          <p id="otpContainer"></p>
+
         </div>
        
       </div>
       <div id="userNotifiedContainer">
       <div class="notificatin-content">
         <div class="successIcon">
-          <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMjAnIGhlaWdodD0nMjAnIHZpZXdCb3g9JzAgMCAyMCAyMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz4KCTxnPgoJCTxwYXRoIGQ9J00tMi0yaDI0djI0SC0yeicgZmlsbD0nbm9uZScvPgoJCTxwYXRoIGQ9J00xMCAwQzQuNDggMCAwIDQuNDggMCAxMHM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTUuNTIgMCAxMCAwek04IDE1bC01LTUgMS40MS0xLjQxTDggMTIuMTdsNy41OS03LjU5TDE3IDZsLTkgOXonIGZpbGw9JyMyNkJDNEUnLz4KCTwvZz4KPC9zdmc+Cg==" class="Rym-jM"></div>
+          <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMjAnIGhlaWdodD0nMjAnIHZpZXdCb3g9JzAgMCAyMCAyMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz4KCTxnPgoJCTxwYXRoIGQ9J00tMi0yaDI0djI0SC0yeicgZmlsbD0nbm9uZScvPgoJCTxwYXRoIGQ9J00xMCAwQzQuNDggMCAwIDQuNDggMCAxMHM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTUuNTIgMCAxMCAwek04IDE1bC01LTUgMS40MS0xLjQxTDggMTIuMTdsNy41OS03LjU5TDE3IDZsLTkgOXonIGZpbGw9JyMyNkJDNEUnLz4KCTwvZz4KPC9zdmc+Cg==" id="msg-icon"></div>
           <div class="notificatinMsg"></div>
       </div>
     </div>
