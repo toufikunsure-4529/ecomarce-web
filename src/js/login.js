@@ -88,7 +88,7 @@ function changeUserId(rightContainer, otpFetchContainer){
 
 
 function resendOtp(){
-  let timer=10;
+  let timer=20;
   let resendOtpBtn=document.querySelector(".resend-code");
   resendOtpBtn.style.pointerEvents = "none"
   const resendtimer = setInterval(() => {

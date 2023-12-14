@@ -110,7 +110,7 @@ productContainers.forEach((container) => {
   product.forEach((product) => {
     let productHTML = `
     <div class="product-card">
-    <a href="${product.link}">
+    <a href="/home.html">
 
       <img src="${product.images}" alt="${product.description}">
       <div class="card-content">
@@ -128,7 +128,7 @@ productContainers.forEach((container) => {
 const cards = document.getElementsByClassName("product-card");
 for (const card of cards) {
   card.addEventListener("click", () => {
-    window.location = "/"
+    window.location = "/home.html"
   });
 }
 
@@ -258,7 +258,7 @@ let productListHTML = ""
 
 productList.forEach((productItem) => {
   productListHTML += `
-    <a href="${productItem.link}">
+    <a href="/home.html">
   <div class="prod-list">
       <div class="featureProduct_image">
                         <img src="${productItem.images}" alt="${productItem.title}">

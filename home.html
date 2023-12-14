@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Online Product</title>
+    <link rel="stylesheet" href="/src/css/home.css">
+    <link rel="stylesheet" href="/src/css/homeq.css">
+    <script type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+    <script defer="defer"
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="container">
+          <div class="productContent">
+
+            <div class="product-filter">
+              <div class="filter-section">
+                <div class="title">
+                  <p class="container-title">Filters</p>
+                  <a href="#" class="clear-all-filter">Clear All</a>
+                </div>
+              </div>
+
+              <div class="filter-section">
+                <div class="title">
+                  <p class="section-title">CATEGORIES</p>
+                </div>
+                <div class="hyper-link-product">
+                  <span><ion-icon name="chevron-back-outline"></ion-icon></span>
+                  <a href="#">Mobiles & Accessories</a>
+                </div>
+                <div class="product-name">
+                  <span>Mobiles</span>
+                </div>
+              </div>
+
+              <div class="filter-section">
+                <div class="filter-price">
+                  <div class="title">
+                    <p class="section-title">Price</p>
+                    <a href="/" class="clear-filterBtn">Clear</a>
+                  </div>
+                  <div class="filter-input-range">
+                    <input type="range">
+                  </div>
+                  <div class="price-dropdownBox">
+
+                    <select name id class="price-dropdwn">
+                      <option value="min">Min</option>
+                      <option value="10000" selected>₹10000</option>
+                      <option value="20000">₹20000</option>
+                      <option value="30000">₹30000</option>
+                    </select>
+                    <span class="seprateprice-option">to</span>
+
+                    <select name id class="price-dropdwn">
+                      <option value="20000">₹20000</option>
+                      <option value="30000">₹30000</option>
+                      <option value="40000">₹30000+</option>
+                    </select>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="filter-section">
+                <div class="accordian">
+                  <div class="title">
+                    <p class="section-title">Brand</p>
+                    <span><ion-icon name="chevron-down-outline"></ion-icon></span>
+                  </div>
+                </div>
+
+                <div class="brand-select">
+                  <label for="brand-name">
+                    <input type="checkbox" name="MOTOROLA" id="brand-name">MOTOROLA
+                  </label>
+
+                </div>
+              </div>
+
+              <div class="filter-section">
+                <div class="flipkart-assured">
+                  <label for="assured">
+                    <input type="checkbox" name="flipkart assured" id="assured">
+                    <img src="/public/images/assuredLogo.png"
+                      alt="flipkart assured" class="assured-img">
+                  </label>
+                  <span class="question">?</span>
+                </div>
+
+              </div>
+
+              <div class="filter-section">
+                <div class="accordian">
+                  <div class="title">
+                    <p class="section-title">CUSTOMER RATINGS</p>
+                    <span><ion-icon name="chevron-down-outline"></ion-icon></span>
+                  </div>
+                </div>
+
+                <div class="brand-select dropdown-container">
+                  <label for="4star">
+                    <input type="checkbox" name="MOTOROLA" id="4star">4<span><ion-icon
+                        name="star" class="star-icon"></ion-icon></span> & above
+                  </label>
+                  <label for="5star">
+                    <input type="checkbox" name="MOTOROLA" id="5star">3<span><ion-icon
+                        name="star" class="star-icon"></ion-icon></span> & above
+                  </label>
+
+                </div>
+              </div>
+
+              <div class="filter-section">
+                <div class="accordian">
+                  <div class="title">
+                    <p class="section-title">GST INVOICE AVAILABLE</p>
+                    <span><ion-icon name="chevron-down-outline"></ion-icon></span>
+                  </div>
+                </div>
+
+                <div class="brand-select dropdown-container">
+                  <label for="gst">
+                    <input type="checkbox" name="MOTOROLA" id="gst">GST Invoice
+                    Available
+                  </label>
+
+                </div>
+              </div>
+
+              <div class="filter-section">
+                <div class="accordian">
+                  <div class="title">
+                    <p class="section-title">Ram</p>
+                    <span><ion-icon name="chevron-down-outline"></ion-icon></span>
+                  </div>
+                </div>
+
+                <div class="brand-select dropdown-container">
+                  <label for="gst">
+                    <input type="checkbox" name="MOTOROLA" id="gst">
+                    8 GB and Above
+                  </label>
+
+                </div>
+              </div>
+
+            </div>
+
+            <div class="product-view">
+              <div class="view-description">
+                <div class="pagination">
+                  <div class="pagination-menu">
+                    <a href="#">Home</a>
+                    <span><ion-icon name="chevron-forward"
+                        class="right-forward-icon"></ion-icon></span>
+
+                  </div>
+                  <div class="pagination-menu">
+                    <a href="#">Mobiles & Accessories</a>
+                    <span><ion-icon name="chevron-forward"
+                        class="right-forward-icon"></ion-icon></span>
+
+                  </div>
+                  <div class="pagination-menu">
+                    <a href="#">Mobiles</a>
+                  </div>
+                </div>
+
+                <div class="prodcut-list">
+                  <a href="#">MOTOROLA Mobiles</a>
+                  <span>,</span>
+                  <a href="#">oppo Mobiles</a>
+                  <span>,</span>
+                  <a href="#">Gionee Mobiles</a>
+                  <span>,</span>
+                  <a href="#">Vivo Mobiles </a>
+                  <span>,</span>
+                  <a href="#">Smartphones Mobiles</a>
+                  <span>,</span>
+                  <a href="#">XOLO Mobiles</a>
+                  <span>,</span>
+                  <a href="#">Coolpad Mobiles</a>
+                  <span>,</span>
+                  <a href="#">Cellecor Mobiles</a>
+                  <span>,</span>
+                  <a href="#">Mobiles & Accessories</a>
+                  <span>,</span>
+                  <a href="#">Lava Mobiles</a>
+                </div>
+
+                <h1 class="heading">Edge40</h1>
+                <span class="showingResult">(Showing 1 – 4 products of 4
+                  products)</span>
+
+                <div class="product-sort">
+                  <span class="sortby">Sort By</span>
+                  <div class="sort">Popularity</div>
+                  <div class="sort">Price -- Low to High</div>
+                  <div class="sort">Price -- High to Low</div>
+                  <div class="sort">Newest First</div>
+                </div>
+              </div>
+
+              <div class="product-card-view">
+                <div class="product-img">
+                  <img
+                    src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/2/m/o/edge-40-pay40030in-motorola-original-imagpqzchzhg6fex.jpeg?q=70"
+                    alt="Mobile">
+
+                  <div class="brand-select">
+                    <label for="compare">
+                      <input type="checkbox" name="MOTOROLA" id="compare">Add to
+                      Compare
+                    </label>
+                  </div>
+                </div>
+
+                <div class="product-details">
+                  <div class="product-title">
+                    MOTOROLA Edge 40 (Nebula Green, 256 GB)
+                  </div>
+                  <div class="customer-rating">
+                    <div class="review">
+                      4.3 <span><ion-icon name="star" class="star-icon"></ion-icon></span>
+                    </div>
+                    <div class="review-count">
+                      <span>61,923 Ratings& 7,111 Reviews</span>
+                    </div>
+                  </div>
+
+                  <div class="product-features">
+                    <ul class="features-list-item">
+                      <li class="features-list">8 GB RAM | 256 GB ROM</li>
+                      <li class="features-list">50MP + 13MP | 32MP Front Camera</li>
+                      <li class="features-list">4400 mAh Battery</li>
+                      <li class="features-list">Dimensity 8020 Processor</li>
+                      <li class="features-list">Vegan Leather</li>
+                      <li class="features-list">1 Year Handset and 6 Months
+                        Accessories</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="product-price">
+                  <div class="price-section">
+                    <div class="price">₹26,499</div>
+                    <div class="prePrice"><del>₹34,499</del>
+                      <span class="discount">24% off</span>
+                    </div>
+                  </div>
+                  <div class="flipkart-assoured">
+                    <img src="/public/images/assuredLogo.png"
+                      alt="flipkart assured" class="assured-img">
+                  </div>
+                </div>
+
+              </div>
+              <div class="container">
+              <div class="askUser-help">
+                <span>Did you find what you were looking for?</span>
+                <span class="help-confirmBtn">Yes</span>
+                <span class="help-confirmBtn">No</span>
+
+
+                <div class="confrimation-form">
+                <form action="">
+                  <div class="form-desc">
+                    We’d love to hear from you about our search experience. Your feedback will help us improve Flipkart for everyone.
+                  </div>
+                  <div class="form-inputMsg">
+                    <textarea name="" id="" rows="10" maxlength="1000" class="form-textarea"></textarea>
+                  </div>
+                  <button class="form-submitBtn">submit</button>
+                </form>
+              </div>
+
+              <div class="not-Confirmform">
+                <form action="">
+                  <div class="form-desc">
+                    Choose an option that best describes your problem.
+                  </div>
+                  <div class="problem-list">
+                    <select name="" id="" class="peoblem-list-select" required>
+                      <option value="" disabled selected>Please select an issue</option>
+                      <option value="1">Sort/Filter option isn't helpful</option>
+                      <option value="2">Above my budget</option>
+                      <option value="3">Irrelevant results</option>
+                      <option value="4">Not enough variety or choice</option>
+                      <option value="5">Cannot be delivered at my pincode</option>
+                      <option value="6">Out of stock</option>
+                      <option value="7">Not available on Flipkart</option>
+                    </select>
+                  </div>
+                  <div class="form-inputMsg">
+                    <textarea name="" id="" rows="10" maxlength="1000" class="form-textarea"></textarea>
+                  </div>
+                  <button class="form-submitBtn">submit</button>
+                </form>
+              </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="/src/js/home.js"></script>
+
+  </body>
+</html>
