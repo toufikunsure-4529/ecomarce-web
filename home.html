@@ -51,7 +51,7 @@
                   </div>
                   <div class="price-dropdownBox">
 
-                    <select name id class="price-dropdwn">
+                    <select name id="toPrice" class="price-dropdwn">
                       <option value="min">Min</option>
                       <option value="10000" selected>₹10000</option>
                       <option value="20000">₹20000</option>
@@ -59,7 +59,7 @@
                     </select>
                     <span class="seprateprice-option">to</span>
 
-                    <select name id class="price-dropdwn">
+                    <select name id="formPrice" class="price-dropdwn">
                       <option value="20000">₹20000</option>
                       <option value="30000">₹30000</option>
                       <option value="40000">₹30000+</option>
@@ -71,19 +71,21 @@
 
               <div class="filter-section">
                 <div class="accordian">
-                  <div class="title">
+                  <div class="title accordion-header" onclick="accordianSection(this)">
                     <p class="section-title">Brand</p>
                     <span><ion-icon name="chevron-down-outline"></ion-icon></span>
                   </div>
-                </div>
 
-                <div class="brand-select">
+                <div class="brand-select accordian-content">
                   <label for="brand-name">
                     <input type="checkbox" name="MOTOROLA" id="brand-name">MOTOROLA
                   </label>
-
                 </div>
               </div>
+              </div>
+
+
+
 
               <div class="filter-section">
                 <div class="flipkart-assured">
@@ -99,51 +101,51 @@
 
               <div class="filter-section">
                 <div class="accordian">
-                  <div class="title">
+                  <div class="title accordion-header" onclick="accordianSection(this)">
                     <p class="section-title">CUSTOMER RATINGS</p>
                     <span><ion-icon name="chevron-down-outline"></ion-icon></span>
                   </div>
-                </div>
 
-                <div class="brand-select dropdown-container">
+                <div class="brand-select dropdown-container accordian-content">
                   <label for="4star">
-                    <input type="checkbox" name="MOTOROLA" id="4star">4<span><ion-icon
-                        name="star" class="star-icon"></ion-icon></span> & above
+                    <input type="checkbox" class="star-checkbox" name="MOTOROLA" id="4star" onclick="filterRating4avove()">4<span><ion-icon
+                    name="star" class="star-icon"></ion-icon></span> & above
                   </label>
-                  <label for="5star">
-                    <input type="checkbox" name="MOTOROLA" id="5star">3<span><ion-icon
+                  
+                  <label for="3star">
+                    <input type="checkbox" name="3star" id="3star" onclick="filterRating3avove()">3<span><ion-icon
                         name="star" class="star-icon"></ion-icon></span> & above
                   </label>
 
                 </div>
               </div>
+              </div>
 
               <div class="filter-section">
                 <div class="accordian">
-                  <div class="title">
+                  <div class="title accordion-header" onclick="accordianSection(this)">
                     <p class="section-title">GST INVOICE AVAILABLE</p>
                     <span><ion-icon name="chevron-down-outline"></ion-icon></span>
                   </div>
-                </div>
 
-                <div class="brand-select dropdown-container">
+                <div class="brand-select dropdown-container accordian-content">
                   <label for="gst">
                     <input type="checkbox" name="MOTOROLA" id="gst">GST Invoice
                     Available
                   </label>
+                </div>
 
                 </div>
               </div>
 
               <div class="filter-section">
                 <div class="accordian">
-                  <div class="title">
+                  <div class="title accordion-header" onclick="accordianSection(this)">
                     <p class="section-title">Ram</p>
                     <span><ion-icon name="chevron-down-outline"></ion-icon></span>
                   </div>
-                </div>
 
-                <div class="brand-select dropdown-container">
+                <div class="brand-select dropdown-container accordian-content">
                   <label for="gst">
                     <input type="checkbox" name="MOTOROLA" id="gst">
                     8 GB and Above
@@ -151,6 +153,7 @@
 
                 </div>
               </div>
+            </div>
 
             </div>
 
@@ -201,73 +204,43 @@
                   products)</span>
 
                 <div class="product-sort">
-                  <span class="sortby">Sort By</span>
-                  <div class="sort">Popularity</div>
-                  <div class="sort">Price -- Low to High</div>
-                  <div class="sort">Price -- High to Low</div>
+                  <div class="sortby">Sort By</div>
+                  <div class="sort" onclick="sortProductByPopularity()">Popularity</div>
+                  <div class="sort" onclick="sortProductsByAcending()">Price -- Low to High</div>
+                  <div class="sort" onclick="sortProductsByDecending()">Price -- High to Low</div>
                   <div class="sort">Newest First</div>
                 </div>
               </div>
 
               <div class="product-card-view">
-                <div class="product-img">
-                  <img
-                    src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/2/m/o/edge-40-pay40030in-motorola-original-imagpqzchzhg6fex.jpeg?q=70"
-                    alt="Mobile">
+              <!-- DYNAMICALLY PRODUCT VIEW CONTAINER -->
+              
+              </div>
 
-                  <div class="brand-select">
-                    <label for="compare">
-                      <input type="checkbox" name="MOTOROLA" id="compare">Add to
-                      Compare
-                    </label>
+              
+              
+              <div class="container">
+                <div class="paginationContainer">
+                  <div class="page-count">
+                    <p>Page 2 of 3</p>
                   </div>
+                  <div class="pagination-link-container">
+                  <a href="#">previus</a>
+                  <div class="pagination-page-link">
+                    <a href="#" class="page-link page-link-active">1</a>
+                    <a href="#" class="page-link">2</a>
+                    <a href="#" class="page-link">3</a>
+                  </div>
+                  <a href="#">Next</a>
                 </div>
 
-                <div class="product-details">
-                  <div class="product-title">
-                    MOTOROLA Edge 40 (Nebula Green, 256 GB)
-                  </div>
-                  <div class="customer-rating">
-                    <div class="review">
-                      4.3 <span><ion-icon name="star" class="star-icon"></ion-icon></span>
-                    </div>
-                    <div class="review-count">
-                      <span>61,923 Ratings& 7,111 Reviews</span>
-                    </div>
-                  </div>
-
-                  <div class="product-features">
-                    <ul class="features-list-item">
-                      <li class="features-list">8 GB RAM | 256 GB ROM</li>
-                      <li class="features-list">50MP + 13MP | 32MP Front Camera</li>
-                      <li class="features-list">4400 mAh Battery</li>
-                      <li class="features-list">Dimensity 8020 Processor</li>
-                      <li class="features-list">Vegan Leather</li>
-                      <li class="features-list">1 Year Handset and 6 Months
-                        Accessories</li>
-                    </ul>
-                  </div>
                 </div>
-
-                <div class="product-price">
-                  <div class="price-section">
-                    <div class="price">₹26,499</div>
-                    <div class="prePrice"><del>₹34,499</del>
-                      <span class="discount">24% off</span>
-                    </div>
-                  </div>
-                  <div class="flipkart-assoured">
-                    <img src="/public/images/assuredLogo.png"
-                      alt="flipkart assured" class="assured-img">
-                  </div>
-                </div>
-
               </div>
               <div class="container">
               <div class="askUser-help">
                 <span>Did you find what you were looking for?</span>
-                <span class="help-confirmBtn">Yes</span>
-                <span class="help-confirmBtn">No</span>
+                <span class="help-confirmBtn" id="yes">Yes</span>
+                <span class="help-confirmBtn" id="no">No</span>
 
 
                 <div class="confrimation-form">

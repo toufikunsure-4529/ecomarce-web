@@ -132,20 +132,24 @@ body {
 }
 
 
-.accordian{
+.accordion-header{
   cursor: pointer;
 }
 
+
+.accordian-content {
+  display: none;
+}
 .brand-select input{
   margin-right: 10px;
   border: 1.4px solid #878787;
   border-radius: 1.5px;
+  margin-top: 15px;
 
 }
 
 .brand-select label{
   cursor: pointer;
-  
 }
 .flipkart-assured{
   display: flex;
@@ -268,6 +272,10 @@ cursor: pointer;
   color: #878787;
   font-size: 12px;
 }
+.sortby{
+  font-size: 16px;
+  font-weight: 600;
+}
 
 .product-sort{
   display: flex;
@@ -279,8 +287,14 @@ cursor: pointer;
   padding: 8px 0 4px;
   margin: 0 10px;
   cursor: pointer;
-  /* border-bottom: 2px solid #2874f0; */
   display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.sort-active{
+  color: #2874f0;
+  border-bottom: 2px solid #2874f0;
 }
 
 .product-card-view{
@@ -289,6 +303,7 @@ cursor: pointer;
   padding: 24px 0 30px 24px;
   border-bottom: 1px solid #f0f0f0;
   cursor: pointer;
+  
 }
 
 .product-card-view:hover .product-title{
@@ -298,6 +313,7 @@ cursor: pointer;
 .product-img img{
   width: 158px;
   height: 200px;
+  margin: 15px 0;
 }
 
 .review{
@@ -367,6 +383,51 @@ cursor: pointer;
   
 }
 
+
+.paginationContainer{
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+.page-count p{
+  font-size: 14px;
+  color: #212121;
+}
+
+.pagination-link-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+
+.pagination-link-container a{
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14px;
+  color: #2874f0;
+  font-weight: 600;
+  text-align: center;
+  margin-right: 10px;
+}
+
+
+.page-link-active{
+  display: inline-block;
+  padding: 0 8px;
+  cursor: pointer;
+  line-height: 32px;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  
+  background: #2874f0;
+  color: #fff !important;
+}
+
 .askUser-help{ 
   margin-top: 15px;
 
@@ -427,4 +488,12 @@ cursor: pointer;
 .peoblem-list-select:hover{
   border-bottom: 2px solid #2874f0;
 
+}
+
+.confrimation-form,.not-Confirmform{
+  display: none;
+}
+
+.form-active{
+  display: block;
 }

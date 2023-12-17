@@ -1,0 +1,131 @@
+<div class="product-img">
+  <img
+    src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/2/m/o/edge-40-pay40030in-motorola-original-imagpqzchzhg6fex.jpeg?q=70"
+    alt="Mobile">
+
+  <div class="brand-select">
+    <label for="compare">
+      <input type="checkbox" name="MOTOROLA" id="compare">Add to
+      Compare
+    </label>
+  </div>
+</div>
+
+<div class="product-details">
+  <div class="product-title">
+    MOTOROLA Edge 40 (Nebula Green, 256 GB)
+  </div>
+  <div class="customer-rating">
+    <div class="review">
+      4.3 <span><ion-icon name="star" class="star-icon"></ion-icon></span>
+    </div>
+    <div class="review-count">
+      <span>61,923 Ratings& 7,111 Reviews</span>
+    </div>
+  </div>
+
+  <div class="product-features">
+    <ul class="features-list-item">
+      <li class="features-list">8 GB RAM | 256 GB ROM</li>
+      <li class="features-list">50MP + 13MP | 32MP Front Camera</li>
+      <li class="features-list">4400 mAh Battery</li>
+      <li class="features-list">Dimensity 8020 Processor</li>
+      <li class="features-list">Vegan Leather</li>
+      <li class="features-list">1 Year Handset and 6 Months
+        Accessories</li>
+    </ul>
+  </div>
+</div>
+
+<div class="product-price">
+  <div class="price-section">
+    <div class="price">₹26,499</div>
+    <div class="prePrice"><del>₹34,499</del>
+      <span class="discount">24% off</span>
+    </div>
+  </div>
+  <div class="flipkart-assoured">
+    <img src="/public/images/assuredLogo.png"
+      alt="flipkart assured" class="assured-img">
+  </div>
+</div>
+
+
+
+
+
+.product-card-view:hover .product-title{
+  color: #2874f0;
+}
+
+.product-img img{
+  width: 158px;
+  height: 200px;
+}
+
+.review{
+  line-height: normal;
+    display: inline-block;
+    color: #fff;
+    padding: 2px 4px 2px 6px;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 12px;
+    vertical-align: middle;
+    background-color: #388e3c;
+}
+
+.customer-rating{
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.review-count span{
+  color: #878787;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.features-list{
+  color: #212121;
+  font-size: 14px;
+  margin-top: 5px;
+  line-height: 22px;
+  display: table;
+}
+
+.features-list::before{
+  content: "•";
+  color: #c2c2c2;
+  padding-right: 8px;
+  display: table-cell;
+}
+
+.product-title{
+  font-size: 16.5px;
+  font-weight: 600;
+}
+
+.product-price{
+  margin-left: 70px;
+  display: flex;
+}
+
+.product-price .price{
+  font-size: 25px;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+}
+
+.prePrice{
+  color: #878787;
+}
+
+.prePrice span{
+  color: green;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  
+}

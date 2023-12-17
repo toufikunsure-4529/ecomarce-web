@@ -1,19 +1,30 @@
 let inputUserId=document.getElementById("inputUser-Mob-email")
 let inputValue=document.getElementById("inputValue")
 let otp=Math.floor(Math.random()*900000+100000)
+let signupContainer=document.getElementById("signupContainer")
+let createAccountBtn=document.getElementById("createAccountBtn")
+let otpFetchContainer=document.getElementById("otp-fetchContainer")
+let requestOtpBtn=document.getElementById("requestOtpBtn")
+let rightContainer=document.getElementById("right-container")
+let otpDisplay=document.getElementById("otpContainer")
+let errorDiv=document.getElementById("errorDiv")  
+let existingUserLoginBtn=document.getElementById("existingUserLoginBtn")
+let registeredUser=[8001074096,7414206314,9090595959,8585964752]
 
 function requestOtp(){
-  let requestOtpBtn=document.getElementById("requestOtpBtn")
-  let rightContainer=document.getElementById("right-container")
-  let otpFetchContainer=document.getElementById("otp-fetchContainer")
-  let otpDisplay=document.getElementById("otpContainer")
-  let errorDiv=document.getElementById("errorDiv")
+ 
+  createAccountBtn.addEventListener("click",()=>{
+    rightContainer.style.display="none"
+    signupContainer.style.display="block"
+  })
+
   requestOtpBtn.addEventListener("click",(e)=>{
     e.preventDefault()
     if(inputUserId.value.trim()==="" || inputUserId.value.length!=10 && !validateEmail(inputUserId.value)){
       errorDiv.style.display="block"
       errorDiv.innerText ="Please enter valid Email ID/Mobile number"
       inputUserId.style.borderBottomColor="#ff6161"
+  
     }
     else{
       rightContainer.style.display="none"
@@ -30,6 +41,48 @@ function requestOtp(){
 function validateEmail(email){
   return String(email).toLowerCase().match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
 }
+
+function validatePhoneNumber(input) {
+  const numericInput = input.replace(/[^0-9]/g, '');
+  const maxLength = 10;
+  if (numericInput.length > maxLength) {
+    return numericInput.slice(0, maxLength);
+  } else {
+    return numericInput;
+  }
+}
+
+
+
+function signUp(){
+  let signupBtn=document.getElementById("signupBtn")
+  let signupInputMob=document.getElementById("signupInputMob")
+
+  existingUserLoginBtn.addEventListener("click",()=>{
+    rightContainer.style.display="block"
+    signupContainer.style.display="none"
+  })
+  signupBtn.addEventListener("click",()=>{
+    let inputValue = signupInputMob.value.trim();
+    let errorDisplay=document.querySelector(".errorDiv")
+    if(inputValue==="" || inputValue.length!=10){
+      errorDisplay.style.display="block"
+      errorDisplay.innerText ="Please enter Valid Mobile number"
+      signupInputMob.style.borderBottomColor="#ff6161"
+      
+    }
+    else if (registeredUser.includes(parseInt(inputValue))) {
+      errorDisplay.style.display = "block";
+      errorMsg("You are already registered. Please log in.");
+    }
+    else{
+      signupContainer.style.display="none"
+      otpFetchContainer.style.display="block"
+      successMsg(`Verification code sent to ${inputUserId.value}`)
+    }
+  })
+}
+
 
 
 
@@ -105,5 +158,10 @@ function resendOtp(){
 }
 
 
+
+
+
+
 resendOtp()
 requestOtp()
+signUp()
